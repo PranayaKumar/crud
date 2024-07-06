@@ -39,6 +39,7 @@ public class ProductController {
     @GetMapping("/productById/{id}")
     public ResponseEntity<Product> findProductByID(@PathVariable int id){
         Product product =service.getProductById(id);
+        //Checking the product lenghth1
         if(product ==null){
             return  ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }

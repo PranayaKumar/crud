@@ -3,6 +3,9 @@ package com.crud.crud2.service;
 
 import com.crud.crud2.entity.Product;
 import com.crud.crud2.repository.ProductRepository;
+import org.slf4j.ILoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +16,9 @@ public class ProductService {
     @Autowired
        private ProductRepository repository;
 
+
+
+
     public Product saveProduct(Product product){
         return repository.save(product);
     }
@@ -21,6 +27,8 @@ public class ProductService {
     }
 
     public List <Product> getProduct(){
+
+
         return repository.findAll();
     }
 
